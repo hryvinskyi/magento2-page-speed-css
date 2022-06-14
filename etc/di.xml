@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2022. MageCloud.  All rights reserved.
+  ~ @author: Volodymyr Hryvinskyi <mailto:volodymyr@hryvinskyi.com>
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Hryvinskyi\PageSpeedCss\Api\CanCssMoveToBottomInterface"
+                type="Hryvinskyi\PageSpeedCss\Model\CanCssMoveToBottom"/>
+    <type name="Hryvinskyi\PageSpeedCss\Model\CanCssMoveToBottom">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="attribute" xsi:type="object">Hryvinskyi\PageSpeedCss\Model\Validator\Attribute</item>
+                <item name="criticalCss" xsi:type="object">Hryvinskyi\PageSpeedCss\Model\Validator\CriticalCss</item>
+                <item name="deferred" xsi:type="object">Hryvinskyi\PageSpeedCss\Model\Validator\Deferred</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
