@@ -8,6 +8,10 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Hryvinskyi\PageSpeedCss\Api\CanCssMoveToBottomInterface"
                 type="Hryvinskyi\PageSpeedCss\Model\CanCssMoveToBottom"/>
+    <preference for="Hryvinskyi\PageSpeedCss\Api\UnifyUrlInCssContentInterface"
+                type="Hryvinskyi\PageSpeedCss\Model\UnifyUrlInCssContent"/>
+    <preference for="Hryvinskyi\PageSpeedCss\Api\ConfigInterface"
+                type="Hryvinskyi\PageSpeedCss\Model\Config"/>
     <type name="Hryvinskyi\PageSpeedCss\Model\CanCssMoveToBottom">
         <arguments>
             <argument name="validators" xsi:type="array">
