@@ -25,7 +25,7 @@ class Config implements ConfigInterface
     }
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function isOnlyDeferred($scopeCode = null, string $scopeType = ScopeInterface::SCOPE_STORE): bool
     {
@@ -37,7 +37,7 @@ class Config implements ConfigInterface
      */
     public function isEnableMergeInlineCss($scopeCode = null, string $scopeType = ScopeInterface::SCOPE_STORE): bool
     {
-        return $this->scopeConfig->isSetFlag(self::XML_PATH_ENABLE_MERGE_INLINE_CSS, $scopeCode, $scopeType);
+        return $this->scopeConfig->isSetFlag(self::XML_PATH_ENABLE_MERGE_INLINE_CSS, $scopeType, $scopeCode);
     }
 
     /**
@@ -45,6 +45,6 @@ class Config implements ConfigInterface
      */
     public function isEnableMoveToBottom($scopeCode = null, string $scopeType = ScopeInterface::SCOPE_STORE): bool
     {
-        return $this->scopeConfig->isSetFlag(self::XML_PATH_ENABLE_MOVE_TO_BOTTOM, $scopeCode, $scopeType);
+        return $this->scopeConfig->isSetFlag(self::XML_PATH_ENABLE_MOVE_TO_BOTTOM, $scopeType, $scopeCode);
     }
 }
